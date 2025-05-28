@@ -14,6 +14,10 @@ app.use((_req, res) => {
 
 app.use(errorHandler);
 
+app.get("/", (req, res) => {
+  res.send("Hello there!");
+});
+
 app.listen(PORT, () => {
   console.log(`Hello I'm listening on http://localhost:${PORT}`);
 });
